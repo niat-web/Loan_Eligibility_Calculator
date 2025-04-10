@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Eligibility Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+ </head>
+ 
+
+ <body>
+  <header class="bg-primary text-white py-3 text-center">
+  <h1>Loan Eligibility Calculator</h1>
+  <p>Check your loan eligibility and estimate your monthly installments.</p>
+  <button id="darkModeToggle" class="btn btn-light"><i class="fas fa-moon"></i> Dark Mode</button>
+  </header>
+ 
+
+  <div class="container mt-4">
+  <div class="row">
+  <div class="col-md-12">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">Enter Your Details</h5>
+  <form id="loanForm">
+  <div class="form-group">
+  <label for="income">Monthly Income:</label>
+  <input type="number" class="form-control" id="income" placeholder="Enter your monthly income"
+  required>
+  <div class="invalid-feedback">Please enter a valid income.</div>
+  </div>
+  <div class="form-group">
+  <label for="debts">Existing Monthly Debts:</label>
+  <input type="number" class="form-control" id="debts"
+  placeholder="Enter your total monthly debt payments" required>
+  <div class="invalid-feedback">Please enter valid debt amount.</div>
+  </div>
+  <div class="form-group">
+  <label for="creditScore">Credit Score:</label>
+  <input type="number" class="form-control" id="creditScore" placeholder="Enter your credit score"
+  required>
+  <div class="invalid-feedback">Please enter a valid credit score.</div>
+  </div>
+  <div class="form-group">
+  <label for="loanAmount">Loan Amount:</label>
+  <input type="range" class="form-control-range" id="loanAmount" min="1000" max="100000"
+  step="1000" value="50000">
+  <span id="loanAmountValue">50000</span>
+  </div>
+  <div class="form-group">
+  <label for="loanTenure">Loan Tenure (Months):</label>
+  <input type="range" class="form-control-range" id="loanTenure" min="6" max="60" step="6"
+  value="36">
+  <span id="loanTenureValue">36</span>
+  </div>
+  <button type="submit" class="btn btn-primary">Calculate</button>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+ 
+
+  <div class="row mt-4">
+  <div class="col-md-12">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">Eligibility Results</h5>
+  <div id="results">
+  <p><b>Eligibility:</b> <span id="eligibility"></span></p>
+  <p><b>Interest Rate:</b> <span id="interestRate"></span></p>
+  <p><b>Estimated EMI:</b> <span id="emi"></span></p>
+  <p><b>Approval Probability:</b> <span id="approvalProbability"></span></p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ 
+
+  <div class="row mt-4">
+  <div class="col-md-12">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">Previous Calculations</h5>
+  <ul id="previousCalculations" class="list-group">
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ 
+
+  <footer class="bg-primary text-white py-3 text-center mt-4">
+  &copy; 2024 Loan Eligibility Calculator
+  </footer>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+ </body>
+ 
+
+ </html>

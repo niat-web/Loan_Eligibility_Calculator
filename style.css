@@ -1,0 +1,130 @@
+/* style.css */
+ :root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --card-background: #fff;
+  --dark-primary-color: #2c3e50;
+  --dark-secondary-color: #34495e;
+  --dark-text-color: #fff;
+  --dark-background-color: #333;
+  --dark-card-background: #444;
+ }
+ 
+
+ [data-theme="dark"] {
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --text-color: var(--dark-text-color);
+  --background-color: var(--dark-background-color);
+  --card-background: var(--dark-card-background);
+ }
+ 
+
+ body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+ }
+ 
+
+ header {
+  background-color: var(--primary-color);
+ }
+ 
+
+ .container {
+  max-width: 960px;
+ }
+ 
+
+ .card {
+  background-color: var(--card-background);
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+ }
+ 
+
+ .card-title {
+  color: var(--primary-color);
+ }
+ 
+
+ .form-control {
+  border-color: var(--secondary-color);
+ }
+ 
+
+ .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+ }
+ 
+
+ .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: background-color 0.3s, border-color 0.3s;
+ }
+ 
+
+ .btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+ }
+ 
+
+ .form-control-range {
+  width: 100%;
+ }
+ 
+
+ #results {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+ }
+ 
+
+ footer {
+  background-color: var(--primary-color);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+ }
+ 
+
+ #darkModeToggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+ }
+ 
+
+ #darkModeToggle:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-text-color);
+ }
+ 
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+  .container {
+  width: 100%;
+  padding: 0 15px;
+  }
+  #darkModeToggle{
+  position: static;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+ }
