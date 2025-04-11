@@ -4,7 +4,7 @@
 This project is a Loan Eligibility Calculator built with JavaScript, HTML, and CSS. It allows users to input their income, debts, credit score, desired loan amount, and loan tenure to determine their loan eligibility, potential interest rate, estimated EMI (Equated Monthly Installment), and approval probability. The calculator also features local storage integration to persist and display previous calculations. The core logic is implemented in JavaScript, handling calculations, form validation, and UI updates.
 
 ## Output
-<iframe src="https://github.com/niat-web/Loan_Eligibility_Calculator" height="1000" width="300" title="Loan_Eligibility_Calculator"></iframe>
+<iframe src="https://niat-web.github.io/Loan_Eligibility_Calculator/" height="1000" width="300" title="Loan_Eligibility_Calculator"></iframe>
 
 ## Project Requirements
 **Technologies:** JavaScript, HTML, CSS, Local Storage
